@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Closer EX</title>
+
+</head>
+
+<body>
+<button id="clickButton" class="" onClick="alert(incrimentClickCount());" >click me</button>
+
+<script> 
+
+var incrimentClickCount =(function(){ 
+    
+    var clickCount =0;
+    
+    return function () {
+        return ++clickCount;
+    }
+    
+})();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Prototype Ex</title>
+<style>
+  
+</style>
+
+
+</head>
+
+<body>
+
+<script> 
+   
+   var car = function(name){
+       this.name = name;
+   }
+   
+   var bype
+   
+   var C1 = new car("indica");
+   var C2 = new car("TaTa");
+   
+      car.prototype.getName  = function(){
+         return "car modal "+ this.name;
+      }
+      
+   
+   console.log(C1.getName());
+   console.log(C2.getName());
+   
+</script>
+
+
+</body>
+</html>

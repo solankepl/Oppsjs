@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Promisses Ex</title>
+<style>
+   
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script> 
+    $(function(){
+        var path = "https://oopsjs-solankepl1.c9.io/data.json"
+        
+        var path1 = "https://oopsjs-solankepl1.c9.io/data1.json"
+        
+            function loadJson(path){
+               var deffererd = new $.Deferred();
+                	$.ajax({
+                		dataType: "json",
+                		type:"GET",
+                		async: "false",
+                		url:path 
+                	}).done(function(data) {
+                	    deffererd.resolve(data);
+                	}).fail(function(error) {
+                		deffererd.reject(error);
+                	});
+            	
+            	return deffererd.promise();
+            }
+           
+            function dataLoaded(val){
+                console.log("name = " + val.users[0].name);
+                console.log("=============================");
+            }
+            
+            loadJson(path).done(function(data){
+                dataLoaded(data);
+            });
+            
+            loadJson(path1).done(function(data){
+                console.log("location = " + data.users[0].location)
+            });
+              
+    });
+    
+   
+    
+    
+</script>
+</head>
+
+<body>
+
+
+
+</body>
+</html>

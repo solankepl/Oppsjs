@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Prototype Ex</title>
+<style>
+  
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script> 
+   
+   $(document).ready(function(){
+      var name = {name: "pavan"}
+      
+      
+      
+      
+      var fullname = function(){
+         alert(this.name);
+      }
+      
+      $("#btn1").on("click", $.proxy(fullname, name));
+     
+   })
+   
+</script>
+
+
+</head>
+
+<body>
+
+<button id="btn1">Button 1</button>
+
+
+</body>
+</html>

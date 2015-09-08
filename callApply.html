@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Prototype Ex</title>
+<style>
+  
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script> 
+   
+  var userData = {
+    age : 50,
+    fullInfo : function(fName, mName) {
+        return "fullName = " + fName + mName + "age = " + this.age;
+    }
+};
+
+var employee = {
+    age : 26
+};
+
+console.log(userData.fullInfo('pavan', 'solanke'));
+
+console.log(userData.fullInfo.call(employee, 'ram', 'kale'));
+
+console.log(userData.fullInfo.apply(employee, ['lakhan ', 'varme']));
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+
+</body>
+</html>

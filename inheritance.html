@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Promisses Ex</title>
+<style>
+  
+</style>
+
+
+</head>
+
+<body>
+
+<script> 
+   
+   var vehical = function(){}
+   
+   vehical.prototype.drvie = function(){
+      console.log("pavan");
+   }
+   
+   var car = function(){}
+   
+   car.prototype = new vehical();
+   
+   car.prototype.honk = function(){
+      console.log("ram");
+   }
+   
+   var myCar = new car();
+   
+   myCar.drvie();
+   myCar.honk();
+   
+</script>
+
+
+</body>
+</html>
